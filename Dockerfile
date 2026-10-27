@@ -11,4 +11,4 @@ COPY . .
 
 RUN python manage.py collectstatic --noinput
 
-CMD ["sh", "-c", "python manage.py migrate --noinput && (python manage.py createsuperuser --noinput || true) && uwsgi --http 0.0.0.0:${PORT:-8000} --module backend.wsgi:application --master --processes 3"]
+CMD ["sh", "-c", "python manage.py migrate --noinput && (python manage.py createsuperuser --noinput || true) && uwsgi --http-socket 0.0.0.0:${PORT:-8000} --module backend.wsgi:application --master --processes 3"]
