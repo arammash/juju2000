@@ -218,12 +218,12 @@ STORAGES = {
             'bucket_name': os.environ.get('R2_BUCKET_NAME'),
             'custom_domain': os.environ.get('R2_CUSTOM_DOMAIN'),
             'region_name': 'auto',
+        },
     },
     'staticfiles': {
         'BACKEND': 'whitenoise.storage.CompressedManifestStaticFilesStorage',
         # 'BACKEND': 'whitenoise.storage.CompressedStaticFilesStorage',
-         },
-    }
+    },
 }
 
 # only required for local file storage and serving, in development
