@@ -222,7 +222,8 @@ STORAGES = {
     'staticfiles': {
         'BACKEND': 'whitenoise.storage.CompressedManifestStaticFilesStorage',
         # 'BACKEND': 'whitenoise.storage.CompressedStaticFilesStorage',
-    },
+         },
+    }
 }
 
 # only required for local file storage and serving, in development
